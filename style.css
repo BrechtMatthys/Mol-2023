@@ -118,6 +118,9 @@ section div:nth-of-type(3n){
   body{
     font-size: 18px;
   }
+  li{
+    margin: 0 6%;
+  }
   main{
     grid-template-columns: 1fr 1fr 1fr;
   }
