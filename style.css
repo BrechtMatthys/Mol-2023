@@ -136,39 +136,12 @@ section div:nth-of-type(3n){
     margin: 0 auto;
   }
   main section{
-    height: 80vh;
+    height: 50vh;
   }
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*landscape phone*/
 
 @media (max-height: 505px) and (orientation:landscape) {
   main section{
