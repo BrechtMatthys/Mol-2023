@@ -287,7 +287,7 @@ kandidaten.forEach((item, i) => {
     ankeScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = j + 1;
+      nummers.innerText = speler.scoreAnke;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -300,7 +300,7 @@ kandidaten.forEach((item, i) => {
     bertScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = j + 1;
+      nummers.innerText = speler.scoreBert;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -313,7 +313,7 @@ kandidaten.forEach((item, i) => {
     emanuelleScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = j + 1;
+      nummers.innerText = speler.scoreEmanuelle;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
