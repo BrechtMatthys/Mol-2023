@@ -222,7 +222,7 @@ umaScore.push(spelers[0], spelers[1], spelers[2])
 
 // Yens
 spelers.sort((a, b) => {
-  return b.yensSven - a.yensSven;
+  return b.scoreYens - a.scoreYens;
 });
 
 yensScore.push(spelers[0], spelers[1], spelers[2])

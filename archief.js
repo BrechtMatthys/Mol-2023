@@ -221,7 +221,7 @@ umaScore.push(spelers[0], spelers[1], spelers[2])
 
 // Yens
 spelers.sort((a, b) => {
-  return b.yensSven - a.yensSven;
+  return b.scoreYens - a.scoreYens;
 });
 
 yensScore.push(spelers[0], spelers[1], spelers[2])
@@ -285,7 +285,7 @@ kandidaten.forEach((item, i) => {
     ankeScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = j + 1;
+      nummers.innerText = speler.scoreAnke;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -298,7 +298,7 @@ kandidaten.forEach((item, i) => {
     bertScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = j + 1;
+      nummers.innerText = speler.scoreBert;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -311,7 +311,7 @@ kandidaten.forEach((item, i) => {
     emanuelleScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = j + 1;
+      nummers.innerText = speler.scoreEmanuelle;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -324,7 +324,7 @@ kandidaten.forEach((item, i) => {
     svenScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = j + 1;
+      nummers.innerText = speler.scoreSven;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -337,7 +337,7 @@ kandidaten.forEach((item, i) => {
     umaScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = j + 1;
+      nummers.innerText = speler.scoreUma;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -350,7 +350,7 @@ kandidaten.forEach((item, i) => {
     yensScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = j + 1;
+      nummers.innerText = speler.scoreYens;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -363,7 +363,7 @@ kandidaten.forEach((item, i) => {
     philippeScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = j + 1;
+      nummers.innerText = speler.scorePhilippe;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -376,7 +376,7 @@ kandidaten.forEach((item, i) => {
     neleScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = j + 1;
+      nummers.innerText = speler.scoreNele;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -389,7 +389,7 @@ kandidaten.forEach((item, i) => {
     jensScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = j + 1;
+      nummers.innerText = speler.scoreJens
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -402,7 +402,7 @@ kandidaten.forEach((item, i) => {
     toonScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = j + 1;
+      nummers.innerText = speler.scoreToon;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -415,7 +415,7 @@ kandidaten.forEach((item, i) => {
     gretelScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = j + 1;
+      nummers.innerText = speler.scoreGretel;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
