@@ -114,31 +114,28 @@ section div:nth-of-type(3n){
 
 
 
-
-
-@media (max-width: 1200px) {
-  body{
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  main{
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-
-@media (max-width: 800px) {
-  body{
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  main{
     grid-template-columns: 1fr 1fr;
   }
-  body section{
+  main section{
     height: 55vh;
   }
 }
 
-@media (max-width: 600px) {
-  body{
+@media all and (min-width: 480px) and (max-width: 768px) {
+  main{
     grid-template-columns: 1fr;
     width: 95%;
     margin: 0 auto;
   }
-  body section{
+  main section{
     height: 80vh;
   }
 }
