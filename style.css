@@ -115,12 +115,21 @@ section div:nth-of-type(3n){
 
 
 @media all and (min-width: 1024px) and (max-width: 1280px) {
+  body{
+    font-size: 18px;
+  }
   main{
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
+  body{
+    font-size: 20px;
+  }
+  li{
+    margin: 0 6%;
+  }
   main{
     grid-template-columns: 1fr 1fr;
   }
@@ -130,6 +139,9 @@ section div:nth-of-type(3n){
 }
 
 @media all and (min-width: 480px) and (max-width: 768px) {
+  body{
+    font-size: 24px;
+  }
   main{
     grid-template-columns: 1fr;
     width: 95%;
