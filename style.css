@@ -1,0 +1,127 @@
+header{
+  width: 100%;
+}
+ul{
+  width: 20%;
+  text-align: center;
+}
+li{
+  display: inline;
+  margin: 0 10%;
+}
+main {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #081317;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+ font-family: 'Oswald', sans-serif;
+}
+h2{
+  text-align: center;
+  grid-row: 1;
+  grid-column: 1/4;
+  color: white;
+}
+section{
+  border: 1px solid white;
+  border-radius: 8px;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 50vh;
+  grid-gap: 5px;
+  padding: 10px;
+}
+section div{
+  text-align: center;
+  padding-top: 20%;
+}
+section p{
+  color: white;
+  text-align: center;
+}
+section p:nth-of-type(1n){
+  grid-row: 2;
+  grid-column: 2;
+}
+section p:nth-of-type(2n){
+  grid-row: 3;
+  grid-column: 1;
+}
+section p:nth-of-type(3n){
+  grid-row: 4;
+  grid-column: 3;
+}
+section div:nth-of-type(1n){
+  background-color: yellowgreen;
+  grid-row: 3/15;
+  grid-column: 2;
+  border-radius: 0 0 0 5px;
+}
+
+section div:nth-of-type(2n){
+  background-color: orange;
+  grid-row: 4/15;
+  grid-column: 1;
+  border-radius: 0;
+}
+section div:nth-of-type(3n){
+  background-color: red;
+  grid-row: 5/15;
+  grid-column: 3;
+  border-radius: 0 0 5px 0;
+}
+
+
+.afgevallen{
+  background: repeating-linear-gradient(
+135deg, #081317, #081317 2.4rem, #2d9c99 2.4rem, #2d9c99 3.6rem);
+  opacity: 0.9;
+}
+.afgevallen h2, .afgevallen p{
+  text-shadow: 2px 1px 22px rgba(185,0,0,1);
+}
+
+.mol{
+  background: repeating-linear-gradient(
+135deg, #081317, #2d2323 2.4rem, #2d9c99 2.4rem, #2d9c99 3.6rem);
+  opacity: 0.9;
+  border-color: #FFD700!important;
+}
+.mol h2, .mol p{
+  text-shadow: 2px 1px 22px rgba(185,0,0,1);
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+  body{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 800px) {
+  body{
+    grid-template-columns: 1fr 1fr;
+  }
+  body section{
+    height: 55vh;
+  }
+}
+
+@media (max-width: 600px) {
+  body{
+    grid-template-columns: 1fr;
+    width: 95%;
+    margin: 0 auto;
+  }
+  body section{
+    height: 80vh;
+  }
+}
