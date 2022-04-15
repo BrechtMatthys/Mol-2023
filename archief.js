@@ -1,6 +1,4 @@
 let spelers = [
-
-
   { name: "Virginie",
    scoreAnke: 3,
    scoreBert: 0,
