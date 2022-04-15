@@ -165,10 +165,10 @@ let kandidaten = [
   { name: "Uma" },
   { name: "Yens" },
   { name: "Philippe", status:"mol" },
-  { name: "Gretel", status:"afgevallen" },
+  { name: "Nele", status:"afgevallen" },
   { name: "Jens", status:"afgevallen" },
   { name: "Toon", status:"afgevallen" },
-  { name: "Nele", status:"afgevallen" },
+  { name: "Gretel", status:"afgevallen" },
 ];
 
 
@@ -371,9 +371,9 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
-  // Gretel
-  if (item.name === "Gretel"){
-    gretelScore.forEach((speler, j) => {
+  // Nele
+  if (item.name === "Nele"){
+    neleScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
       nummers.innerText = j + 1;
@@ -410,9 +410,9 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
-  // Nele
-  if (item.name === "Nele"){
-    neleScore.forEach((speler, j) => {
+  // Gretel
+  if (item.name === "Gretel"){
+    gretelScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
       nummers.innerText = j + 1;
@@ -423,5 +423,6 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
+
   main.appendChild(box);
 });

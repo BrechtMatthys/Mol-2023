@@ -157,6 +157,7 @@ let spelers = [
   },
 ];
 
+// dit bepaalt de volgorde van de cards
 let kandidaten = [
   { name: "Anke" },
   { name: "Bert" },
@@ -164,11 +165,11 @@ let kandidaten = [
   { name: "Sven" },
   { name: "Uma" },
   { name: "Yens" },
-  { name: "Philippe", status:"mol" },
-  { name: "Gretel", status:"afgevallen" },
+  { name: "Philippe", status:"afgevallen" },
+  { name: "Nele", status:"afgevallen" },
   { name: "Jens", status:"afgevallen" },
   { name: "Toon", status:"afgevallen" },
-  { name: "Nele", status:"afgevallen" },
+  { name: "Gretel", status:"afgevallen" },
 ];
 
 
@@ -179,10 +180,10 @@ let svenScore = [];
 let umaScore = [];
 let yensScore = [];
 let philippeScore = [];
-let gretelScore = [];
+let neleScore = [];
 let jensScore = [];
 let toonScore = [];
-let neleScore = [];
+let gretelScore = [];
 
 // Anke
 spelers.sort((a, b) => {
@@ -233,12 +234,12 @@ spelers.sort((a, b) => {
 
 philippeScore.push(spelers[0], spelers[1], spelers[2])
 
-// Gretel
+// Nele
 spelers.sort((a, b) => {
-  return b.scoreGretel - a.scoreGretel;
+  return b.scoreNele - a.scoreNele;
 });
 
-gretelScore.push(spelers[0], spelers[1], spelers[2])
+neleScore.push(spelers[0], spelers[1], spelers[2])
 
 // Jens
 spelers.sort((a, b) => {
@@ -254,12 +255,13 @@ spelers.sort((a, b) => {
 
 toonScore.push(spelers[0], spelers[1], spelers[2])
 
-// Nele
+// Gretel
 spelers.sort((a, b) => {
-  return b.scoreNele - a.scoreNele;
+  return b.scoreGretel - a.scoreGretel;
 });
 
-neleScore.push(spelers[0], spelers[1], spelers[2])
+gretelScore.push(spelers[0], spelers[1], spelers[2])
+
 
 
 
@@ -371,9 +373,9 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
-  // Gretel
-  if (item.name === "Gretel"){
-    gretelScore.forEach((speler, j) => {
+  // Nele
+  if (item.name === "Nele"){
+    neleScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
       nummers.innerText = j + 1;
@@ -410,9 +412,9 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
-  // Nele
-  if (item.name === "Nele"){
-    neleScore.forEach((speler, j) => {
+  // Gretel
+  if (item.name === "Gretel"){
+    gretelScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
       nummers.innerText = j + 1;
@@ -423,5 +425,6 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
+
   main.appendChild(box);
 });

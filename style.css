@@ -1,6 +1,11 @@
+body{
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+}
 header{
   width: 100%;
-  background-color: red;
+  overflow: hidden;
+  background-color: #061a27;
 }
 ul{
   width: 20%;
@@ -9,6 +14,19 @@ ul{
 li{
   display: inline;
   margin: 0 10%;
+  color: white;
+}
+a{
+  color: #02d2b4;
+}
+a:hover li{
+  color: #90e7da;
+}
+a:active{
+  color: #abc7c2;
+}
+a:active li{
+  color: #38c2ac;
 }
 main {
   width: 100%;
@@ -17,8 +35,6 @@ main {
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-
- font-family: 'Oswald', sans-serif;
 }
 h2{
   text-align: center;
@@ -60,7 +76,6 @@ section div:nth-of-type(1n){
   background-color: yellowgreen;
   grid-row: 3/15;
   grid-column: 2;
-  border-radius: 0 0 0 5px;
 }
 
 section div:nth-of-type(2n){
@@ -68,6 +83,7 @@ section div:nth-of-type(2n){
   grid-row: 4/15;
   grid-column: 1;
   border-radius: 0;
+  border-radius: 0 0 0 5px;
 }
 section div:nth-of-type(3n){
   background-color: red;
@@ -83,7 +99,7 @@ section div:nth-of-type(3n){
   opacity: 0.9;
 }
 .afgevallen h2, .afgevallen p{
-  text-shadow: 2px 1px 22px rgba(185,0,0,1);
+  text-shadow: 2px 1px 22px rgba(92, 5, 5, 1);
 }
 
 .mol{
@@ -93,7 +109,7 @@ section div:nth-of-type(3n){
   border-color: #FFD700!important;
 }
 .mol h2, .mol p{
-  text-shadow: 2px 1px 22px rgba(185,0,0,1);
+  text-shadow: 2px 1px 22px rgba(92, 5, 5, 1);
 }
 
 
