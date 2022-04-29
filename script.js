@@ -159,12 +159,12 @@ let spelers = [
 
 // dit bepaalt de volgorde van de cards
 let kandidaten = [
-  { name: "Anke" },
-  { name: "Bert" },
   { name: "Emanuelle" },
   { name: "Sven" },
   { name: "Uma" },
   { name: "Yens" },
+  { name: "Anke", status:"afgevallen" },
+  { name: "Bert", status:"afgevallen" },
   { name: "Philippe", status:"afgevallen" },
   { name: "Nele", status:"afgevallen" },
   { name: "Jens", status:"afgevallen" },
@@ -173,31 +173,17 @@ let kandidaten = [
 ];
 
 
-let ankeScore = [];
-let bertScore = [];
 let emanuelleScore = [];
 let svenScore = [];
 let umaScore = [];
 let yensScore = [];
+let ankeScore = [];
+let bertScore = [];
 let philippeScore = [];
 let neleScore = [];
 let jensScore = [];
 let toonScore = [];
 let gretelScore = [];
-
-// Anke
-spelers.sort((a, b) => {
-  return b.scoreAnke - a.scoreAnke;
-});
-
-ankeScore.push(spelers[0], spelers[1], spelers[2])
-
-// Bert
-spelers.sort((a, b) => {
-  return b.scoreBert - a.scoreBert;
-});
-
-bertScore.push(spelers[0], spelers[1], spelers[2])
 
 // Emanuelle
 spelers.sort((a, b) => {
@@ -226,6 +212,20 @@ spelers.sort((a, b) => {
 });
 
 yensScore.push(spelers[0], spelers[1], spelers[2])
+
+// Anke
+spelers.sort((a, b) => {
+  return b.scoreAnke - a.scoreAnke;
+});
+
+ankeScore.push(spelers[0], spelers[1], spelers[2])
+
+// Bert
+spelers.sort((a, b) => {
+  return b.scoreBert - a.scoreBert;
+});
+
+bertScore.push(spelers[0], spelers[1], spelers[2])
 
 // Philippe
 spelers.sort((a, b) => {
@@ -282,32 +282,6 @@ kandidaten.forEach((item, i) => {
 
   box.classList.add(item.name + "box");
   box.classList.add(item.status);
-  // Anke
-  if (item.name === "Anke"){
-    ankeScore.forEach((speler, j) => {
-        // 2 1 3
-      let nummers = document.createElement("div");
-      nummers.innerText = speler.scoreAnke;
-      box.appendChild(nummers);
-        // top 3
-      let spelerbox = document.createElement("p");
-      spelerbox.innerText = speler.name;
-      box.appendChild(spelerbox);
-    });
-  }
-  // Bert
-  if (item.name === "Bert"){
-    bertScore.forEach((speler, j) => {
-        // 2 1 3
-      let nummers = document.createElement("div");
-      nummers.innerText = speler.scoreBert;
-      box.appendChild(nummers);
-        // top 3
-      let spelerbox = document.createElement("p");
-      spelerbox.innerText = speler.name;
-      box.appendChild(spelerbox);
-    });
-  }
   // Emanuelle
   if (item.name === "Emanuelle"){
     emanuelleScore.forEach((speler, j) => {
@@ -353,6 +327,32 @@ kandidaten.forEach((item, i) => {
         // 2 1 3
       let nummers = document.createElement("div");
       nummers.innerText = speler.scoreYens;
+      box.appendChild(nummers);
+        // top 3
+      let spelerbox = document.createElement("p");
+      spelerbox.innerText = speler.name;
+      box.appendChild(spelerbox);
+    });
+  }
+  // Anke
+  if (item.name === "Anke"){
+    ankeScore.forEach((speler, j) => {
+        // 2 1 3
+      let nummers = document.createElement("div");
+      nummers.innerText = speler.scoreAnke;
+      box.appendChild(nummers);
+        // top 3
+      let spelerbox = document.createElement("p");
+      spelerbox.innerText = speler.name;
+      box.appendChild(spelerbox);
+    });
+  }
+  // Bert
+  if (item.name === "Bert"){
+    bertScore.forEach((speler, j) => {
+        // 2 1 3
+      let nummers = document.createElement("div");
+      nummers.innerText = speler.scoreBert;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
