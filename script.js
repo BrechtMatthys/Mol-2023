@@ -1,10 +1,10 @@
 let spelers = [
   { name: "Speler",
    scoreMystery: 0,
-   scoreEmanuelle: 1,
-   scoreSven: 5,
-   scoreUma: 1,
-   scoreYens: 5,
+   scoreComfort: 0,
+   scoreConny: 0,
+   scoreUma: 0,
+   scoreYens: 0,
    scorePhilippe: 0,
    scoreGretel: 0,
    scoreJens: 0,
@@ -13,8 +13,8 @@ let spelers = [
   }, // voor als er geen stemmen zijn op een speler
   { name: "/",
    scoreMystery: 1,
-   scoreEmanuelle: 1,
-   scoreSven: 1,
+   scoreComfort: 1,
+   scoreConny: 1,
    scoreUma: 1,
    scoreYens: 1,
    scorePhilippe: 1,
@@ -25,8 +25,8 @@ let spelers = [
   }, // voor als er geen stemmen zijn op een speler
   { name: "/",
    scoreMystery: 1,
-   scoreEmanuelle: 1,
-   scoreSven: 1,
+   scoreComfort: 1,
+   scoreConny: 1,
    scoreUma: 1,
    scoreYens: 1,
    scorePhilippe: 1,
@@ -37,8 +37,8 @@ let spelers = [
   }, // voor als er geen stemmen zijn op een speler
   { name: "/",
    scoreMystery: 1,
-   scoreEmanuelle: 1,
-   scoreSven: 1,
+   scoreComfort: 1,
+   scoreConny: 1,
    scoreUma: 1,
    scoreYens: 1,
    scorePhilippe: 1,
@@ -51,10 +51,10 @@ let spelers = [
 
 // dit bepaalt de volgorde van de cards
 let kandidaten = [
-  { name: "Sven" },
+  { name: "Conny" },
   { name: "Uma" },
   { name: "Yens" },
-  { name: "Emanuelle", status:"afgevallen" },
+  { name: "Comfort", status:"afgevallen" },
   { name: "Mystery", status:"afgevallen" },
   { name: "Philippe", status:"afgevallen" },
   { name: "Nele", status:"afgevallen" },
@@ -64,8 +64,8 @@ let kandidaten = [
 ];
 
 
-let emanuelleScore = [];
-let svenScore = [];
+let comfortScore = [];
+let connyScore = [];
 let umaScore = [];
 let yensScore = [];
 let mysteryScore = [];
@@ -75,19 +75,19 @@ let jensScore = [];
 let toonScore = [];
 let gretelScore = [];
 
-// Emanuelle
+// Comfort
 spelers.sort((a, b) => {
-  return b.scoreEmanuelle - a.scoreEmanuelle;
+  return b.scoreComfort - a.scoreComfort;
 });
 
-emanuelleScore.push(spelers[0], spelers[1], spelers[2])
+comfortScore.push(spelers[0], spelers[1], spelers[2])
 
-// Sven
+// Conny
 spelers.sort((a, b) => {
-  return b.scoreSven - a.scoreSven;
+  return b.scoreConny - a.scoreConny;
 });
 
-svenScore.push(spelers[0], spelers[1], spelers[2])
+connyScore.push(spelers[0], spelers[1], spelers[2])
 
 // Uma
 spelers.sort((a, b) => {
@@ -165,12 +165,12 @@ kandidaten.forEach((item, i) => {
 
   box.classList.add(item.name + "box");
   box.classList.add(item.status);
-  // Emanuelle
-  if (item.name === "Emanuelle"){
-    emanuelleScore.forEach((speler, j) => {
+  // Comfort
+  if (item.name === "Comfort"){
+    comfortScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = speler.scoreEmanuelle;
+      nummers.innerText = speler.scoreComfort;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -178,12 +178,12 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
-  // Sven
-  if (item.name === "Sven"){
-    svenScore.forEach((speler, j) => {
+  // Conny
+  if (item.name === "Conny"){
+    connyScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = speler.scoreSven;
+      nummers.innerText = speler.scoreConny;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
