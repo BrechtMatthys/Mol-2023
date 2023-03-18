@@ -53,7 +53,7 @@ let spelers = [
 let kandidaten = [
   { name: "Conny" },
   { name: "Lancelot" },
-  { name: "Leila" },
+  { name: "Leïla" },
   { name: "Comfort", status:"afgevallen" },
   { name: "Mystery", status:"afgevallen" },
   { name: "Lieselot", status:"afgevallen" },
@@ -96,7 +96,7 @@ spelers.sort((a, b) => {
 
 lancelotScore.push(spelers[0], spelers[1], spelers[2])
 
-// Leila
+// Leïla
 spelers.sort((a, b) => {
   return b.scoreLeila - a.scoreLeila;
 });
@@ -204,8 +204,8 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
-  // Leila
-  if (item.name === "Leila"){
+  // Leïla
+  if (item.name === "Leïla"){
     leilaScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
