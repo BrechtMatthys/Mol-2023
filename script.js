@@ -3,7 +3,7 @@ let spelers = [
    scoreMystery: 0,
    scoreComfort: 0,
    scoreConny: 0,
-   scoreUma: 0,
+   scoreLancelot: 0,
    scoreYens: 0,
    scorePhilippe: 0,
    scoreGretel: 0,
@@ -15,7 +15,7 @@ let spelers = [
    scoreMystery: 1,
    scoreComfort: 1,
    scoreConny: 1,
-   scoreUma: 1,
+   scoreLancelot: 1,
    scoreYens: 1,
    scorePhilippe: 1,
    scoreGretel: 1,
@@ -27,7 +27,7 @@ let spelers = [
    scoreMystery: 1,
    scoreComfort: 1,
    scoreConny: 1,
-   scoreUma: 1,
+   scoreLancelot: 1,
    scoreYens: 1,
    scorePhilippe: 1,
    scoreGretel: 1,
@@ -39,7 +39,7 @@ let spelers = [
    scoreMystery: 1,
    scoreComfort: 1,
    scoreConny: 1,
-   scoreUma: 1,
+   scoreLancelot: 1,
    scoreYens: 1,
    scorePhilippe: 1,
    scoreGretel: 1,
@@ -52,7 +52,7 @@ let spelers = [
 // dit bepaalt de volgorde van de cards
 let kandidaten = [
   { name: "Conny" },
-  { name: "Uma" },
+  { name: "Lancelot" },
   { name: "Yens" },
   { name: "Comfort", status:"afgevallen" },
   { name: "Mystery", status:"afgevallen" },
@@ -66,7 +66,7 @@ let kandidaten = [
 
 let comfortScore = [];
 let connyScore = [];
-let umaScore = [];
+let lancelotScore = [];
 let yensScore = [];
 let mysteryScore = [];
 let philippeScore = [];
@@ -89,12 +89,12 @@ spelers.sort((a, b) => {
 
 connyScore.push(spelers[0], spelers[1], spelers[2])
 
-// Uma
+// Lancelot
 spelers.sort((a, b) => {
-  return b.scoreUma - a.scoreUma;
+  return b.scoreLancelot - a.scoreLancelot;
 });
 
-umaScore.push(spelers[0], spelers[1], spelers[2])
+lancelotScore.push(spelers[0], spelers[1], spelers[2])
 
 // Yens
 spelers.sort((a, b) => {
@@ -191,12 +191,12 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
-  // Uma
-  if (item.name === "Uma"){
-    umaScore.forEach((speler, j) => {
+  // Lancelot
+  if (item.name === "Lancelot"){
+    lancelotScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = speler.scoreUma;
+      nummers.innerText = speler.scoreLancelot;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
