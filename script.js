@@ -4,48 +4,48 @@ let spelers = [
    scoreComfort: 0,
    scoreConny: 0,
    scoreLancelot: 0,
-   scoreYens: 0,
-   scorePhilippe: 0,
-   scoreGretel: 0,
-   scoreJens: 0,
-   scoreToon: 0,
-   scoreNele: 0,
+   scoreLeila: 0,
+   scoreLieselot: 0,
+   scoreRuben: 0,
+   scoreSamya: 0,
+   scoreThomas: 0,
+   scoreToos: 0,
   }, // voor als er geen stemmen zijn op een speler
   { name: "/",
    scoreMystery: 1,
    scoreComfort: 1,
    scoreConny: 1,
    scoreLancelot: 1,
-   scoreYens: 1,
-   scorePhilippe: 1,
-   scoreGretel: 1,
-   scoreJens: 1,
-   scoreToon: 1,
-   scoreNele: 1,
+   scoreLeila: 1,
+   scoreLieselot: 1,
+   scoreRuben: 1,
+   scoreSamya: 1,
+   scoreThomas: 1,
+   scoreToos: 1,
   }, // voor als er geen stemmen zijn op een speler
   { name: "/",
    scoreMystery: 1,
    scoreComfort: 1,
    scoreConny: 1,
    scoreLancelot: 1,
-   scoreYens: 1,
-   scorePhilippe: 1,
-   scoreGretel: 1,
-   scoreJens: 1,
-   scoreToon: 1,
-   scoreNele: 1,
+   scoreLeila: 1,
+   scoreLieselot: 1,
+   scoreRuben: 1,
+   scoreSamya: 1,
+   scoreThomas: 1,
+   scoreToos: 1,
   }, // voor als er geen stemmen zijn op een speler
   { name: "/",
    scoreMystery: 1,
    scoreComfort: 1,
    scoreConny: 1,
    scoreLancelot: 1,
-   scoreYens: 1,
-   scorePhilippe: 1,
-   scoreGretel: 1,
-   scoreJens: 1,
-   scoreToon: 1,
-   scoreNele: 1,
+   scoreLeila: 1,
+   scoreLieselot: 1,
+   scoreRuben: 1,
+   scoreSamya: 1,
+   scoreThomas: 1,
+   scoreToos: 1,
   },
 ];
 
@@ -53,27 +53,27 @@ let spelers = [
 let kandidaten = [
   { name: "Conny" },
   { name: "Lancelot" },
-  { name: "Yens" },
+  { name: "Leila" },
   { name: "Comfort", status:"afgevallen" },
   { name: "Mystery", status:"afgevallen" },
-  { name: "Philippe", status:"afgevallen" },
-  { name: "Nele", status:"afgevallen" },
-  { name: "Jens", status:"afgevallen" },
-  { name: "Toon", status:"afgevallen" },
-  { name: "Gretel", status:"afgevallen" },
+  { name: "Lieselot", status:"afgevallen" },
+  { name: "Toos", status:"afgevallen" },
+  { name: "Samya", status:"afgevallen" },
+  { name: "Thomas", status:"afgevallen" },
+  { name: "Ruben", status:"afgevallen" },
 ];
 
 
 let comfortScore = [];
 let connyScore = [];
 let lancelotScore = [];
-let yensScore = [];
+let leilaScore = [];
 let mysteryScore = [];
-let philippeScore = [];
-let neleScore = [];
-let jensScore = [];
-let toonScore = [];
-let gretelScore = [];
+let lieselotScore = [];
+let toosScore = [];
+let samyaScore = [];
+let thomasScore = [];
+let rubenScore = [];
 
 // Comfort
 spelers.sort((a, b) => {
@@ -96,12 +96,12 @@ spelers.sort((a, b) => {
 
 lancelotScore.push(spelers[0], spelers[1], spelers[2])
 
-// Yens
+// Leila
 spelers.sort((a, b) => {
-  return b.scoreYens - a.scoreYens;
+  return b.scoreLeila - a.scoreLeila;
 });
 
-yensScore.push(spelers[0], spelers[1], spelers[2])
+leilaScore.push(spelers[0], spelers[1], spelers[2])
 
 // Mystery
 spelers.sort((a, b) => {
@@ -110,40 +110,40 @@ spelers.sort((a, b) => {
 
 mysteryScore.push(spelers[0], spelers[1], spelers[2])
 
-// Philippe
+// Lieselot
 spelers.sort((a, b) => {
-  return b.scorePhilippe - a.scorePhilippe;
+  return b.scoreLieselot - a.scoreLieselot;
 });
 
-philippeScore.push(spelers[0], spelers[1], spelers[2])
+lieselotScore.push(spelers[0], spelers[1], spelers[2])
 
-// Nele
+// Toos
 spelers.sort((a, b) => {
-  return b.scoreNele - a.scoreNele;
+  return b.scoreToos - a.scoreToos;
 });
 
-neleScore.push(spelers[0], spelers[1], spelers[2])
+toosScore.push(spelers[0], spelers[1], spelers[2])
 
-// Jens
+// Samya
 spelers.sort((a, b) => {
-  return b.scoreJens - a.scoreJens;
+  return b.scoreSamya - a.scoreSamya;
 });
 
-jensScore.push(spelers[0], spelers[1], spelers[2])
+samyaScore.push(spelers[0], spelers[1], spelers[2])
 
-// Toon
+// Thomas
 spelers.sort((a, b) => {
-  return b.scoreToon - a.scoreToon;
+  return b.scoreThomas - a.scoreThomas;
 });
 
-toonScore.push(spelers[0], spelers[1], spelers[2])
+thomasScore.push(spelers[0], spelers[1], spelers[2])
 
-// Gretel
+// Ruben
 spelers.sort((a, b) => {
-  return b.scoreGretel - a.scoreGretel;
+  return b.scoreRuben - a.scoreRuben;
 });
 
-gretelScore.push(spelers[0], spelers[1], spelers[2])
+rubenScore.push(spelers[0], spelers[1], spelers[2])
 
 
 
@@ -204,12 +204,12 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
-  // Yens
-  if (item.name === "Yens"){
-    yensScore.forEach((speler, j) => {
+  // Leila
+  if (item.name === "Leila"){
+    leilaScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = speler.scoreYens;
+      nummers.innerText = speler.scoreLeila;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -230,12 +230,12 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
-  // Philippe
-  if (item.name === "Philippe"){
-    philippeScore.forEach((speler, j) => {
+  // Lieselot
+  if (item.name === "Lieselot"){
+    lieselotScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = speler.scorePhilippe;
+      nummers.innerText = speler.scoreLieselot;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -243,12 +243,12 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
-  // Nele
-  if (item.name === "Nele"){
-    neleScore.forEach((speler, j) => {
+  // Toos
+  if (item.name === "Toos"){
+    toosScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = speler.scoreNele;
+      nummers.innerText = speler.scoreToos;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -256,12 +256,12 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
-  // Jens
-  if (item.name === "Jens"){
-    jensScore.forEach((speler, j) => {
+  // Samya
+  if (item.name === "Samya"){
+    samyaScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = speler.scoreJens;
+      nummers.innerText = speler.scoreSamya;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -269,12 +269,12 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
-  // Toon
-  if (item.name === "Toon"){
-    toonScore.forEach((speler, j) => {
+  // Thomas
+  if (item.name === "Thomas"){
+    thomasScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = speler.scoreToon;
+      nummers.innerText = speler.scoreThomas;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
@@ -282,12 +282,12 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
-  // Gretel
-  if (item.name === "Gretel"){
-    gretelScore.forEach((speler, j) => {
+  // Ruben
+  if (item.name === "Ruben"){
+    rubenScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = speler.scoreGretel;
+      nummers.innerText = speler.scoreRuben;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
