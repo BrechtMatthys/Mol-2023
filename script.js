@@ -1,51 +1,87 @@
 let spelers = [
-  { name: "Speler",
-   scoreMystery: 1,
+  { name: "Brecht",
+   scoreMatteo: 0,
    scoreComfort: 0,
-   scoreConny: 0,
+   scoreConny: 2,
    scoreLancelot: 2,
    scoreLeila: 0,
-   scoreLieselot: 3,
+   scoreLieselot: 0,
+   scoreRuben: 6,
+   scoreSamya: 2,
+   scoreThomas: 0,
+   scoreToos: 0,
+  },
+  { name: "Ineke",
+   scoreMatteo: 0,
+   scoreComfort: 1,
+   scoreConny: 0,
+   scoreLancelot: 2,
+   scoreLeila: 3,
+   scoreLieselot: 1,
+   scoreRuben: 0,
+   scoreSamya: 3,
+   scoreThomas: 2,
+   scoreToos: 0,
+  },
+  { name: "Santi",
+   scoreMatteo: 2,
+   scoreComfort: 0,
+   scoreConny: 0,
+   scoreLancelot: 5,
+   scoreLeila: 4,
+   scoreLieselot: 0,
    scoreRuben: 0,
    scoreSamya: 0,
    scoreThomas: 0,
-   scoreToos: 0,
+   scoreToos: 1,
+  },
+  { name: "Evelyn",
+   scoreMatteo: 0,
+   scoreComfort: 0,
+   scoreConny: 0,
+   scoreLancelot: 0,
+   scoreLeila: 0,
+   scoreLieselot: 3,
+   scoreRuben: 0,
+   scoreSamya: 2,
+   scoreThomas: 0,
+   scoreToos: 1,
   }, // voor als er geen stemmen zijn op een speler
   { name: "/",
-   scoreMystery: 000,
-   scoreComfort: 000,
-   scoreConny: 000,
-   scoreLancelot: 000,
-   scoreLeila: 000,
-   scoreLieselot: 000,
-   scoreRuben: 000,
-   scoreSamya: 000,
-   scoreThomas: 000,
-   scoreToos: 000,
+   scoreMatteo: 0.0,
+   scoreComfort: 0.0,
+   scoreConny: 0.0,
+   scoreLancelot: 0.0,
+   scoreLeila: 0.0,
+   scoreLieselot: 0.0,
+   scoreRuben: 0.0,
+   scoreSamya: 0.0,
+   scoreThomas: 0.0,
+   scoreToos: 0.0,
   }, // voor als er geen stemmen zijn op een speler
   { name: "/",
-   scoreMystery: 000,
-   scoreComfort: 000,
-   scoreConny: 000,
-   scoreLancelot: 000,
-   scoreLeila: 000,
-   scoreLieselot: 000,
-   scoreRuben: 000,
-   scoreSamya: 000,
-   scoreThomas: 000,
-   scoreToos: 000,
+   scoreMatteo: 0.0,
+   scoreComfort: 0.0,
+   scoreConny: 0.0,
+   scoreLancelot: 0.0,
+   scoreLeila: 0.0,
+   scoreLieselot: 0.0,
+   scoreRuben: 0.0,
+   scoreSamya: 0.0,
+   scoreThomas: 0.0,
+   scoreToos: 0.0,
   }, // voor als er geen stemmen zijn op een speler
   { name: "/",
-   scoreMystery: 000,
-   scoreComfort: 000,
-   scoreConny: 000,
-   scoreLancelot: 000,
-   scoreLeila: 000,
-   scoreLieselot: 000,
-   scoreRuben: 000,
-   scoreSamya: 000,
-   scoreThomas: 000,
-   scoreToos: 000,
+   scoreMatteo: 0.0,
+   scoreComfort: 0.0,
+   scoreConny: 0.0,
+   scoreLancelot: 0.0,
+   scoreLeila: 0.0,
+   scoreLieselot: 0.0,
+   scoreRuben: 0.0,
+   scoreSamya: 0.0,
+   scoreThomas: 0.0,
+   scoreToos: 0.0,
   },
 ];
 
@@ -54,13 +90,13 @@ let kandidaten = [
   { name: "Comfort" },
   { name: "Conny" },
   { name: "Lancelot" },
-  { name: "Leïla" }, // , status:"afgevallen"
+  { name: "Leïla" },
   { name: "Lieselot" },
-  { name: "Mystery" },
   { name: "Ruben" },
   { name: "Samya" },
   { name: "Thomas" },
   { name: "Toos" },
+  { name: "Matteo", status:"afgevallen" },
 ];
 
 
@@ -68,7 +104,7 @@ let comfortScore = [];
 let connyScore = [];
 let lancelotScore = [];
 let leilaScore = [];
-let mysteryScore = [];
+let matteoScore = [];
 let lieselotScore = [];
 let toosScore = [];
 let samyaScore = [];
@@ -103,12 +139,12 @@ spelers.sort((a, b) => {
 
 leilaScore.push(spelers[0], spelers[1], spelers[2])
 
-// Mystery
+// Matteo
 spelers.sort((a, b) => {
-  return b.scoreMystery - a.scoreMystery;
+  return b.scoreMatteo - a.scoreMatteo;
 });
 
-mysteryScore.push(spelers[0], spelers[1], spelers[2])
+matteoScore.push(spelers[0], spelers[1], spelers[2])
 
 // Lieselot
 spelers.sort((a, b) => {
@@ -217,12 +253,12 @@ kandidaten.forEach((item, i) => {
       box.appendChild(spelerbox);
     });
   }
-  // Mystery
-  if (item.name === "Mystery"){
-    mysteryScore.forEach((speler, j) => {
+  // Matteo
+  if (item.name === "Matteo"){
+    matteoScore.forEach((speler, j) => {
         // 2 1 3
       let nummers = document.createElement("div");
-      nummers.innerText = speler.scoreMystery;
+      nummers.innerText = speler.scoreMatteo;
       box.appendChild(nummers);
         // top 3
       let spelerbox = document.createElement("p");
